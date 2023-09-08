@@ -1,0 +1,27 @@
+{
+	"name": "noclat.com",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"clear": "rimraf .svelte-kit build",
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"story:dev": "histoire dev",
+		"story:build": "histoire build",
+		"story:preview": "histoire preview"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^2.0.3",
+		"@sveltejs/kit": "^1.20.4",
+		"autoprefixer": "^10.4.15",
+		"postcss": "^8.4.27",
+		"rimraf": "^5.0.1",
+		"svelte": "^4.0.5",
+		"tailwindcss": "^3.3.3",
+		"vite": "^4.4.2"
+	},
+	"dependencies": {
+		"clsx": "^2.0.0"
+	}
+}
