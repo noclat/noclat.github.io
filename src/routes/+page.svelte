@@ -1,10 +1,11 @@
 <script>
-	import Heading from "$lib/components/Heading.svelte";
+	import Divider from "$lib/components/Divider.svelte";
+	import Hero from "$lib/layouts/Hero.svelte";
 </script>
 
-<main class="max-w-[1440px] min-h-full mx-auto pt-px pl-px grid grid-cols-3 auto-rows-[var(--unit)] gap-px">
-	<Heading
-		class="col-span-2 row-span-3 row-start-2"
-		title="Freelance JavaScript Developer."
-	/>
+<main class="max-w-sm lg:max-w-[1440px] mx-auto pt-px pl-px space-y-px">
+	<Divider />
+	<Hero />
+	<Divider />
+	<Divider />
 </main>
