@@ -29,9 +29,7 @@ export default {
       current: 'currentColor',
       inherit: 'inherit',
       white: '#E2E8EB',
-      light: '#848B8D',
-      dark: '#0C0E10',
-      black: '#040607',
+      black: '#0C0E10',
     },
     extend: {
       minWidth: defaultTheme.spacing,

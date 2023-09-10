@@ -12,10 +12,10 @@
 		title="Freelance JavaScript Developer."
 	/>
   <Divider class="lg:hidden" />
-	<aside class="row-span-5 lg:row-span-3 overflow-hidden flex items-center justify-center p-4 bg-dark">
+	<aside class="row-span-5 lg:row-span-3 overflow-hidden flex items-center justify-center p-4 bg-black">
 		<Card class="animate-slide-in after-500">
       <div class="flex flex-col items-center gap-6">
-        <figure class="relative w-24 lg:w-32 aspect-[9/10] p-1 rounded-[50%] border-2 border-white/10 bg-dark">
+        <figure class="relative w-24 lg:w-32 aspect-[9/10] p-1 rounded-[50%] border-2 border-white/10 bg-black">
           <img
             src={Profile}
             alt=""
@@ -32,7 +32,7 @@
         </figure>
         <header class="text-center lg:space-y-2">
           <h2 class="text-md/none lg:text-lg/none font-black uppercase text-white">Nicolas Torres</h2>
-          <p class="text-xs/none font-bold uppercase text-light">full-stack</p>
+          <p class="text-xs/none font-bold uppercase text-white/50">full-stack</p>
         </header>
       </div>
       <footer

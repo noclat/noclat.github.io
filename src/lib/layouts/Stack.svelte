@@ -3,6 +3,7 @@
   import Section from "$lib/components/Section.svelte";
 
   let current = null;
+
   const logos = [
     {
       title: 'SvelteKit',
@@ -43,14 +44,14 @@
       classes: 'fill-white',
       html: `<path d="M12 4.8c-3.2 0-5.2 1.6-6 4.8C7.2 8 8.6 7.4 10.2 7.8c.91.23 1.57.9 2.29 1.62C13.66 10.62 15.03 12 18 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.91-.23-1.57-.9-2.29-1.62C16.34 6.18 14.97 4.8 12 4.8ZM6 12c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.91.23 1.56.9 2.29 1.62 1.17 1.2 2.54 2.58 5.51 2.58 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.91-.23-1.57-.9-2.29-1.62C10.34 13.38 8.97 12 6 12Z" />`,
     },
-  ]
+  ];
 </script>
 
 <Section>
-  <div class="relative col-span-full max-lg:row-span-2 flex items-center bg-dark">
+  <div class="relative col-span-full max-lg:row-span-2 flex items-center bg-black">
     <div class="w-full flex items-center justify-evenly lg:justify-center lg:gap-12 px-2 h-8 lg:h-12">
       {#each logos as logo, i}
-      {@const id = `logo-${i}`}
+        {@const id = `logo-${i}`}
         <svg
           role="img"
           viewBox="0 0 24 24"
@@ -59,7 +60,7 @@
           class={cx(
             'h-full w-auto',
             'opacity-20 hover:opacity-100 hover:-translate-y-1 hover:scale-105',
-            'transform duration-300',
+            'transform duration-150',
             logo.classes
           )}
           aria-labelledby={id}
@@ -74,7 +75,7 @@
       class={cx(
         'absolute bottom-4 inset-x-4 text-center',
         'text-xs/none lg:text-sm/none font-black uppercase text-white',
-        'transform-opacity duration-300',
+        'transform-opacity duration-150',
         {
           'opacity-20': !current,
         }
