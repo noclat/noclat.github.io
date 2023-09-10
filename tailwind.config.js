@@ -14,7 +14,7 @@ const inlineSVG = (svg) => {
 
 const holoPattern = inlineSVG(`
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" style="background-color:#fff">
-    <path fill="#000" fill-opacity="0.5" fill-rule="evenodd" d="M0 0h35v35H0V0Zm5 5h25v25H5V5Zm5 5h15v15H10V10Zm5 5h5v5h-5v-5ZM40 5h25v25H40V5Zm5 5h15v15H45V10Zm5 5h5v5h-5v-5Zm20 20H35v35h35V35Zm-5 5H40v25h25V40Zm-5 5H45v15h15V45Zm-5 5h-5v5h5v-5ZM30 40H5v25h25V40Zm-5 5H10v15h15V45Zm-5 5h-5v5h5v-5Z" />
+    <path fill="#040607" fill-opacity="0.5" fill-rule="evenodd" d="M0 0h35v35H0V0Zm5 5h25v25H5V5Zm5 5h15v15H10V10Zm5 5h5v5h-5v-5ZM40 5h25v25H40V5Zm5 5h15v15H45V10Zm5 5h5v5h-5v-5Zm20 20H35v35h35V35Zm-5 5H40v25h25V40Zm-5 5H45v15h15V45Zm-5 5h-5v5h5v-5ZM30 40H5v25h25V40Zm-5 5H10v15h15V45Zm-5 5h-5v5h5v-5Z" />
   </svg>
 `);
 
@@ -28,34 +28,10 @@ export default {
       transparent: 'transparent',
       current: 'currentColor',
       inherit: 'inherit',
+      white: '#E2E8EB',
+      light: '#848B8D',
+      dark: '#0C0E10',
       black: '#040607',
-      white: '#fff',
-      accent: {
-        '50': '#fffceb',
-        '100': '#fef6c7',
-        '200': '#fcec8b',
-        '300': '#fbdc4e',
-        '400': '#faca25',
-        '500': '#eca50b',
-        '600': '#d88307',
-        '700': '#b35d0a',
-        '800': '#91470f',
-        '900': '#773b10',
-        '950': '#451e03',
-      },
-      gray: {
-        '50': '#f4f6f7',
-        '100': '#e2e8eb',
-        '200': '#c9d4d8',
-        '300': '#a3b4bd',
-        '400': '#768e9a',
-        '500': '#5a7280',
-        '600': '#4e606c',
-        '700': '#43515b',
-        '800': '#3c464e',
-        '900': '#363d43',
-        '950': '#0c0e10',
-      },
     },
     extend: {
       minWidth: defaultTheme.spacing,
@@ -89,52 +65,27 @@ export default {
           '0%': {
             'opacity': 0,
             'color': 'inherit',
-            'text-shadow': '0 0 1px rgb(244,246,247)',
+            'text-shadow': '0 0 1px rgb(226,232,235)',
             'transform': 'scale(1) translateY(100%) rotate(15deg)',
           },
           '70%': {
             'color': 'inherit',
           },
           '90%': {
-            'text-shadow': '0 0 1px rgb(244,246,247)',
+            'text-shadow': '0 0 1px rgb(226,232,235)',
           },
           '100%': {
             'opacity': 100,
             'color': '#e2e8eb',
             'text-shadow': 'none',
             'transform': 'none',
-            'text-shadow': '2px 2px 0 #0c0e10, 4px 4px 0 rgba(244,246,247,0.2)',
+            'text-shadow': '2px 2px 0 #0c0e10, 4px 4px 0 rgba(226,232,235,0.2)',
           },
         },
       },
     },
   },
   plugins: [
-    // grid background
-    plugin(({ addBase, theme }) => {
-      addBase({
-        'body': {
-          'background-size': '100vw calc(var(--unit) + 1px)',
-          'background-image': 'linear-gradient(to bottom, rgba(244,246,247,.02) 1px, transparent 1px)',
-          'background-position': 'top center',
-        },
-        'main': {
-          'border-right': '1px solid transparent',
-          'background-size': '100% calc(var(--unit) + 1px)',
-          'background-image': `
-            linear-gradient(to right, rgba(244,246,247,.03) 1px, transparent 1px), 
-            linear-gradient(to bottom, rgba(244,246,247,.03) 1px, transparent 1px),
-            radial-gradient(at top left, rgba(244,246,247,.2) 1px, rgba(244,246,247,0) 1px)
-          `,
-          'background-position': 'top left',
-          
-          [`@media (min-width: ${theme('screens.lg')})`]: {
-            'background-size': '33.33% calc(var(--unit) + 1px)',
-          },
-        },
-      });
-    }),
-
     // hide scrollbar
     plugin(({ addUtilities }) => {
       addUtilities({
@@ -162,6 +113,31 @@ export default {
         },
         '.play': {
           'animation-play-state': 'running',
+        },
+      });
+    }),
+
+    // grid background
+    plugin(({ addBase, theme }) => {
+      addBase({
+        'body': {
+          'background-size': '100vw calc(var(--unit) + 1px)',
+          'background-image': 'linear-gradient(to bottom, rgba(226,232,235,.02) 1px, transparent 1px)',
+          'background-position': 'top center',
+        },
+        'main': {
+          'border-right': '1px solid transparent',
+          'background-size': '100% calc(var(--unit) + 1px)',
+          'background-image': `
+            linear-gradient(to right, rgba(226,232,235,.03) 1px, transparent 1px), 
+            linear-gradient(to bottom, rgba(226,232,235,.03) 1px, transparent 1px),
+            radial-gradient(at top left, rgba(226,232,235,.2) 1px, rgba(226,232,235,0) 1px)
+          `,
+          'background-position': 'top left',
+          
+          [`@media (min-width: ${theme('screens.lg')})`]: {
+            'background-size': '33.33% calc(var(--unit) + 1px)',
+          },
         },
       });
     }),

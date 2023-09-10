@@ -51,8 +51,8 @@
   style={`--rx:${y*10}deg;--ry:${-x*10}deg;--px:${50+x*5}%;--py:${50+y*50}%`}
   class={cx(
     'relative overflow-hidden',
-    'w-48 lg:w-60 aspect-[3/4] lg:aspect-[5/7] flex p-px',
-    'bg-gradient-to-br from-gray-400/10 via-gray-400/30 to-gray-400/10',
+    'w-48 lg:w-60 aspect-[3/4] lg:aspect-[5/7] flex p-0.5',
+    'bg-gradient-to-br from-light/10 via-light/30 to-light/10',
     'shadow-xl shadow-black/70',
     '[transform:perspective(20cm)_rotateX(var(--rx))_rotateY(var(--ry))]',
     {
@@ -63,7 +63,7 @@
     $$props.class
   )}
 >
-  <div class="w-full p-4 flex flex-col items-center justify-center bg-gray-950">
+  <div class="w-full p-4 flex flex-col items-center justify-center bg-dark">
     <slot />
   </div>
   <div
