@@ -34,7 +34,7 @@
   {/each}
 </h1>
 
-<style lang="css">
+<style lang="postcss">
   .char {
     @apply transform-gpu;
     animation: type-in .5s cubic-bezier(0.68,-0.55,0.27,1.55) both;
@@ -57,7 +57,6 @@
     100% {
       opacity: 100;
       color: theme(colors.white);
-      text-shadow: none;
       transform: none;
       text-shadow: 2px 2px 0 theme(colors.black), 4px 4px 0 rgba(226,232,235,0.2);
     }

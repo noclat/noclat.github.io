@@ -1,6 +1,6 @@
 <script>
   import cx from 'clsx';
-  import Section from "$lib/components/Section.svelte";
+  import Section from '$lib/components/Section.svelte';
 
   let current = null;
 
@@ -48,6 +48,7 @@
 </script>
 
 <Section>
+  <h2 class="sr-only">Preferred stack</h2>
   <div class="relative col-span-full max-lg:row-span-2 flex items-center bg-black">
     <div class="w-full flex items-center justify-evenly lg:justify-center lg:gap-12 px-2 h-8 lg:h-12">
       {#each logos as logo, i}
@@ -59,7 +60,7 @@
           on:mouseleave={() => current = null}
           class={cx(
             'h-full w-auto',
-            'opacity-20 hover:opacity-100 hover:-translate-y-1 hover:scale-105',
+            'opacity-40 hover:opacity-100 hover:-translate-y-1 hover:scale-105',
             'transform duration-150',
             logo.classes
           )}
@@ -74,10 +75,10 @@
       role="presentation"
       class={cx(
         'absolute bottom-4 inset-x-4 text-center',
-        'text-xs/none lg:text-sm/none font-black uppercase text-white',
+        'text-xs/none lg:text-sm/none font-bold uppercase text-white',
         'transform-opacity duration-150',
         {
-          'opacity-20': !current,
+          'opacity-40': !current,
         }
       )}
     >

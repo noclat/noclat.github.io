@@ -1,5 +1,6 @@
 <script>
 	import Divider from "$lib/components/Divider.svelte";
+	import About from "$lib/layouts/About.svelte";
 	import Hero from "$lib/layouts/Hero.svelte";
 	import Services from "$lib/layouts/Services.svelte";
 	import Stack from "$lib/layouts/Stack.svelte";
@@ -12,9 +13,11 @@
 	<Services />
 	<Stack />
 	<Divider />
+	<About />
+	<Divider />
 </main>
 
-<style lang="css">
+<style lang="postcss">
 	:global(body) {
 		background-size: 100vw calc(var(--unit) + 1px);
 		background-image: linear-gradient(to bottom, rgba(226,232,235,.02) 1px, transparent 1px);
