@@ -5,7 +5,7 @@
 
   const social = [
     {
-      label: 'Resume on LindedIn',
+      label: 'Resume on LinkedIn',
       href: 'http://linkedin.com/in/noclat',
     },
     {
