@@ -6,10 +6,7 @@
 		"clear": "rimraf .svelte-kit build",
 		"dev": "vite dev --host",
 		"build": "vite build",
-		"preview": "vite preview",
-		"story:dev": "histoire dev",
-		"story:build": "histoire build",
-		"story:preview": "histoire preview"
+		"preview": "vite preview"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^2.0.3",

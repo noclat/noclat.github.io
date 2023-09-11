@@ -72,7 +72,7 @@
   <button
     on:click={() => move(-1)}
     aria-label="Previous"
-    class="lg:hidden absolute z-1 right-1/2 -translate-x-16 top-[calc(var(--unit)*1.5)] -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-black text-white/80"
+    class="lg:hidden absolute z-1 right-1/2 -translate-x-16 top-[calc(var(--unit)*1.5)] -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-black text-white/80 select-none"
   >
     <span role="img">
       <ChevronLeft
@@ -84,7 +84,7 @@
   <button
     on:click={() => move(1)}
     aria-label="Next"
-    class="lg:hidden absolute z-1 left-1/2 translate-x-16 top-[calc(var(--unit)*1.5)] -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-black text-white/80"
+    class="lg:hidden absolute z-1 left-1/2 translate-x-16 top-[calc(var(--unit)*1.5)] -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-black text-white/80 select-none"
   >
     <span role="img">
       <ChevronRight
