@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
   import cx from 'clsx';
   import { Rocket } from 'lucide-svelte';
 
-  let container;
+  let container: HTMLElement;
   let x = 0;
   let y = 0;
   let transition = true;
-  let timeout;
   let touch = false;
+  let timeout: NodeJS.Timeout;
 
-  function tilt(e) {
+  function tilt(e: MouseEvent) {
     const rect = container.getBoundingClientRect();
     const centerX = rect.left + rect.width/2;
     const centerY = rect.top + rect.height/2;

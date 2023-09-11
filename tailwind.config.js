@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin');
 
 export default {
-  content: ['./src/**/*.{html,js,svelte}'],
+  content: ['./src/**/*.{html,js,ts,svelte}'],
   theme: {
     fontFamily: {
       sans: ['Figtree', ...defaultTheme.fontFamily.sans],

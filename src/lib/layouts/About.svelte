@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Globe, Quote } from 'lucide-svelte';
 
   import Section from '$lib/components/Section.svelte';

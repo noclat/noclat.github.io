@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Profile from '$lib/assets/profile.webp';
 	import Card from '$lib/components/Card.svelte';
 	import Divider from '$lib/components/Divider.svelte';

@@ -1,10 +1,16 @@
-<script>
+<script lang="ts">
   import cx from 'clsx';
   import Section from '$lib/components/Section.svelte';
 
-  let current = null;
+  let current: string | null = null;
 
-  const logos = [
+  type ILogo = {
+    title: string;
+    html: string;
+    classes?: string;
+  };
+
+  const logos: ILogo[] = [
     {
       title: 'SvelteKit',
       classes: 'fill-white',
@@ -55,6 +61,7 @@
         {@const id = `logo-${i}`}
         <svg
           role="img"
+          aria-labelledby={id}
           viewBox="0 0 24 24"
           on:mouseenter={() => current = logo.title}
           on:mouseleave={() => current = null}
@@ -64,7 +71,6 @@
             'transition',
             logo.classes
           )}
-          aria-labelledby={id}
         >
           <title id={id}>{logo.title}</title>
           {@html logo.html}

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Divider from "$lib/components/Divider.svelte";
 	import About from "$lib/layouts/About.svelte";
 	import Hero from "$lib/layouts/Hero.svelte";

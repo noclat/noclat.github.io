@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import cx from 'clsx';
 
-  export let title = '';
+  export let title: string = '';
 </script>
 
 <h1

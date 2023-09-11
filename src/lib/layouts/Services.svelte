@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import cx from 'clsx';
   import { ChevronLeft, ChevronRight ,Code2, MonitorSmartphone, Server } from 'lucide-svelte';
 
@@ -25,7 +25,7 @@
     },
   ];
 
-  let container;
+  let container: HTMLElement;
   function move(dir = 1) {
     container.scrollTo({
       left: (container.scrollWidth + container.scrollLeft + container.clientWidth * dir)%container.scrollWidth,
@@ -49,12 +49,13 @@
       >
         <div class="grow">
           <figure class="custom-shadow absolute top-[calc(var(--unit)*1.5)] lg:top-[var(--unit)] xl:top-[calc(var(--unit)*0.6)] left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 rounded-full bg-white text-black">
-            <svelte:component
-              this={service.icon}
-              role="img"
-              size={32}
-              absoluteStrokeWidth={true}
-            />
+            <span role="img">
+              <svelte:component
+                this={service.icon}
+                size={32}
+                absoluteStrokeWidth={true}
+              />
+            </span>
           </figure>
         </div>
         <header class="space-y-2 text-left">
@@ -73,22 +74,24 @@
     aria-label="Previous"
     class="lg:hidden absolute z-1 right-1/2 -translate-x-16 top-[calc(var(--unit)*1.5)] -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-black text-white/80"
   >
-    <ChevronLeft
-      role="img"
-      class="-ml-0.5"
-      absoluteStrokeWidth={true}
-    />
+    <span role="img">
+      <ChevronLeft
+        class="-ml-0.5"
+        absoluteStrokeWidth={true}
+      />
+    </span>
   </button>
   <button
     on:click={() => move(1)}
     aria-label="Next"
     class="lg:hidden absolute z-1 left-1/2 translate-x-16 top-[calc(var(--unit)*1.5)] -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-black text-white/80"
   >
-    <ChevronRight
-      role="img"
-      class="ml-0.5"
-      absoluteStrokeWidth={true}
-    />
+    <span role="img">
+      <ChevronRight
+        class="ml-0.5"
+        absoluteStrokeWidth={true}
+      />
+    </span>
   </button>
 </Section>
 
