@@ -76,7 +76,7 @@
   </div>
   <div
     class={cx(
-      'holo',
+      'holo pointer-events-none select-none',
       {
         'transition-[background-position] after:transition-[background-position]': transition,
         'ease-[cubic-bezier(0.34,1.56,0.64,1)] after:ease-[cubic-bezier(0.34,1.56,0.64,1)] duration-300 after:duration-300': transition && !touch,
@@ -92,7 +92,7 @@
     animation: flip 1s .5s cubic-bezier(0.68, -0.6, 0.32, 1.6) backwards;
   }
 
-  .front, .back {
+  .front, .back, .holo {
     visibility: visible;
     perspective: 0;
     backface-visibility: hidden;
@@ -112,8 +112,6 @@
   .holo {
     opacity: .6;
     background-position: center, 0 var(--py), var(--px) var(--py);
-    pointer-events: none;
-    user-select: none;
   }
 
   .holo, .holo::after {

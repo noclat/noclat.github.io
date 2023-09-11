@@ -60,8 +60,8 @@
           on:mouseleave={() => current = null}
           class={cx(
             'h-full w-auto',
-            'opacity-40 hover:opacity-100 hover:-translate-y-1 hover:scale-105',
-            'transform duration-150',
+            'opacity-50 hover:opacity-100 hover:-translate-y-1 hover:scale-105',
+            'transition',
             logo.classes
           )}
           aria-labelledby={id}
@@ -76,9 +76,9 @@
       class={cx(
         'absolute bottom-4 inset-x-4 text-center',
         'text-xs/none lg:text-sm/none font-bold uppercase text-white',
-        'transform-opacity duration-150',
+        'transition-opacity',
         {
-          'opacity-40': !current,
+          'opacity-50': !current,
         }
       )}
     >

@@ -1,5 +1,5 @@
 <script>
-	import Profile from '$lib/assets/profile.jpg';
+	import Profile from '$lib/assets/profile.webp';
 	import Card from '$lib/components/Card.svelte';
 	import Divider from '$lib/components/Divider.svelte';
 	import Heading from '$lib/components/Heading.svelte';
@@ -19,6 +19,9 @@
           <img
             src={Profile}
             alt=""
+            width="auto"
+            height="200"
+            loading="lazy"
             class="w-full h-full rounded-[50%] object-cover saturate-0 contrast-125 brightness-125"
           />
           <span class="absolute z-1 -bottom-1 left-1/2 -translate-x-1/2 inline-flex items-center gap-px p-px whitespace-nowrap font-bold text-xs text-white bg-white/20 backdrop-blur-sm">
