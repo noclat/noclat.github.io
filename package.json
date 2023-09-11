@@ -23,7 +23,6 @@
 	},
 	"dependencies": {
 		"clsx": "^2.0.0",
-		"throttle-debounce": "^5.0.0",
-		"vivus": "^0.4.6"
+		"throttle-debounce": "^5.0.0"
 	}
 }

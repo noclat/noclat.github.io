@@ -19,7 +19,7 @@
           <span
             style={`--delay:${300+(i*100+j*50)}ms`}
             class={cx(
-              'animate-type-in after-[var(--delay)] transform-gpu text-white',
+              'char text-white',
               {
                 '-ml-1 lg:-ml-3': char === 'V' && line[j-1] === 'A', // fixing kerning
                 '-mr-1 lg:-mr-3': char === 'V' && line[j+1] === 'A', // fixing kerning
@@ -33,3 +33,33 @@
     </span>
   {/each}
 </h1>
+
+<style lang="css">
+  .char {
+    @apply transform-gpu;
+    animation: type-in .5s cubic-bezier(0.68,-0.55,0.27,1.55) both;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes type-in {
+    0% {
+      opacity: 0;
+      color: inherit;
+      text-shadow: 0 0 1px theme(colors.white);
+      transform: scale(1) translateY(100%) rotate(15deg);
+    }
+    70% {
+      color: inherit;
+    }
+    90% {
+      text-shadow: 0 0 1px theme(colors.white);
+    }
+    100% {
+      opacity: 100;
+      color: theme(colors.white);
+      text-shadow: none;
+      transform: none;
+      text-shadow: 2px 2px 0 theme(colors.black), 4px 4px 0 rgba(226,232,235,0.2);
+    }
+  }
+</style>

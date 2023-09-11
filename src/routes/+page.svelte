@@ -13,3 +13,27 @@
 	<Stack />
 	<Divider />
 </main>
+
+<style lang="css">
+	:global(body) {
+		background-size: 100vw calc(var(--unit) + 1px);
+		background-image: linear-gradient(to bottom, rgba(226,232,235,.02) 1px, transparent 1px);
+		background-position: top center;
+	}
+
+  main {
+		border-right: 1px solid transparent;
+		background-size: 100% calc(var(--unit) + 1px);
+		background-image:
+			linear-gradient(to right, rgba(226,232,235,.03) 1px, transparent 1px), 
+			linear-gradient(to bottom, rgba(226,232,235,.03) 1px, transparent 1px),
+			radial-gradient(at top left, rgba(226,232,235,.2) 1px, rgba(226,232,235,0) 1px);
+		background-position: top left;
+	}
+	
+	@media screen(lg) {
+		main {
+			background-size: 33.33% calc(var(--unit) + 1px);
+		}
+	}
+</style>
