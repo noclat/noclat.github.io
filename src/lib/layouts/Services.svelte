@@ -34,16 +34,16 @@
   }
 </script>
 
-<Section class="relative">
+<Section class="relative overflow-hidden">
   <h2 class="sr-only">Services</h2>
   <div
     bind:this={container}
-    class="row-span-5 lg:row-span-3 xl:row-span-2 col-span-full flex lg:grid lg:grid-cols-3 gap-px max-lg:bg-white/[0.03] overflow-x-auto scrollbar-none scroll-smooth snap-x snap-mandatory"
+    class="row-span-5 lg:row-span-3 xl:row-span-2 col-span-full flex lg:grid lg:grid-cols-3 gap-px max-lg:bg-white/[0.03] overflow-x-auto scrollbar-none overscroll-none snap-x snap-mandatory"
   >
     {#each services as service}
       <article
         class={cx(
-          'relative shrink-0 w-full p-6 lg:px-8 xl:p-12 flex flex-col items-center gap-4 bg-black snap-center snap-always',
+          'relative shrink-0 w-full p-6 lg:px-8 xl:p-12 flex flex-col items-center gap-4 snap-center snap-always',
           service.classes
         )}
       >
@@ -98,6 +98,7 @@
   }
 
   .pattern {
+    background-color: theme(colors.black);
     background-position: center;
     background-attachment: fixed;
   }

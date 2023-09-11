@@ -6,15 +6,15 @@
 
 <h1
   class={cx(
-    'flex flex-col gap-px max-lg:items-center',
+    'flex flex-col gap-px overflow-hidden',
     'text-5xl/none lg:text-8xl/none xl:text-9xl/none max-lg:tracking-tighter',
     'font-black uppercase text-black',
     $$props.class
   )}
 >
   {#each title.toLocaleUpperCase().split(/[\s\n\r]+/) as line, i (i)}
-    <span class="flex flex-col justify-end h-[var(--unit)] overflow-hidden bg-black">
-      <span class="inline-flex items-baseline relative top-[.2em] xl:top-[.23em]">
+    <span class="flex flex-col items-stretch justify-end h-[var(--unit)] overflow-hidden bg-black">
+      <span class="inline-flex items-baseline max-lg:justify-center relative top-[.2em] xl:top-[.23em]">
         {#each line.split('') as char, j (j)}
           <span
             style={`--delay:${300+(i*100+j*50)}ms`}

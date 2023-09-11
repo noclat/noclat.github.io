@@ -59,7 +59,7 @@
     {
       'transition-transform': transition,
       'ease-[cubic-bezier(0.34,1.56,0.64,1)] duration-300': transition && !touch,
-      'ease-out duration-700': transition && touch,
+      'ease-out duration-500': transition && touch,
     },
     $$props.class
   )}
@@ -80,7 +80,7 @@
       {
         'transition-[background-position] after:transition-[background-position]': transition,
         'ease-[cubic-bezier(0.34,1.56,0.64,1)] after:ease-[cubic-bezier(0.34,1.56,0.64,1)] duration-300 after:duration-300': transition && !touch,
-        'ease-out after:ease-out duration-1000 after:duration-700': transition && touch,
+        'ease-out after:ease-out duration-500 after:duration-500': transition && touch,
       }
     )}
   />
